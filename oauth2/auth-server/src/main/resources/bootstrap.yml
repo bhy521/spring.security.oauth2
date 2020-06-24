@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: auth-server
+  cloud:
+    consul:
+      host: 192.168.28.97
+      port: 8500
+      discovery:
+        health-check-url: http://${server.address}:${server.port}/
+        hostname: ${server.address}
+        health-check-interval: 5s
